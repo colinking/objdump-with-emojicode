@@ -11,4 +11,4 @@ _NOTE_: This assignment was written for Ubuntu Linux and may not work elsewhere.
 1. [Install Emojicode](http://www.emojicode.org/docs/guides/install.html)
 2. You may need to install an emoji font onto your system: `sudo apt-get install ttf-ancient-fonts`
 3. [Install the commands package](https://github.com/colinking/emojicode-packages), which is used to run objdump.
-4. Execute `make run`
+4. Execute `make all`

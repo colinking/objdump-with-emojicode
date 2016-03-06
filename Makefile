@@ -2,7 +2,7 @@
 EC_COMPILER=emojicodec
 EC_ENGINE=emojicode
 
-.PHONY: clean build
+all: clean build run
 
 main.emojib:
 	$(EC_COMPILER) main.emojic

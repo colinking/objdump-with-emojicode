@@ -1,8 +1,44 @@
+📦 files 🔴
 
-🐇 🐼 🍇
+🐇 🎆 🍇
+
+  🌮
+    Verifies that a file exists and is readable
+    Returns a string status
+  🌮
+  🐇 🐖 ✅ binary 🔡 ➡️ 🔡 🍇
+    🍮 result 🔤🔤
+    🍊 🍩 📃 📑 binary 🍇
+      🍊 🍩 📜 📑 binary 🍇
+        🍎 🔤✅🔤
+      🍉 🍓 🍇
+        🍎 🔤❌❌  FILE EXISTS BUT IS NOT READABLE ❌❌🔤
+      🍉
+    🍉
+    🍓 🍇
+      🍎 🍪 🔤❌❌  FILE DOES NOT EXIST ❌❌🔤 🍪
+    🍉
+    👴 Can't happen -- static analysis error
+    🍎 result
+  🍉
+
   🐇 🐖 🏁 ➡️ 🚂 🍇
 
+    🍦 OBJDUMP_CMD 🔤objdump -d -M intel🔤
+
+    🍮 binaries 🍨
+      🔤/usr/bin/rlogin🔤
+      🔤/usr/local/bin/emojicode🔤
+      🔤/usr/local/bin/emojicodec🔤
+    🍆
+
     😀 🔤The following binaries will be analyzed:🔤
+    🍮 count 1
+    🔂 binary binaries 🍇
+      🍮 result 🍩 ✅ 🎆 binary
+      😀 🍪 🔤❌t🔤 🔷🔡🚂 count 10 🔤: 🔤 binary 🔤 - 🔤 result 🍪
+      🍫 count
+    🍉
 
     🍎 0
   🍉

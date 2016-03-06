@@ -98,7 +98,7 @@
     🍮 instruction_set 🔷🍨🐚🔡🐸 👴 List of instructions seen so far
 
     🔂 b binaries 🍇
-      😀 🍪 🔤Analyzing binary: 🔤 b 🍪
+      😀 🍪 🔤 🕵  Analyzing binary: 🔤 b 🍪
       🍮 command 🍪 🔤objdump -d -M intel 🔤 b 🔤 | grep -E "^\s*[0-9a-zA-Z]{6}:.*$"🔤 🍪
       🍮 cmdoutput 🍩 ⌨ 🤖 command
       🍮 lines 🔫 cmdoutput 🔤❌n🔤

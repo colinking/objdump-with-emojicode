@@ -1,35 +1,89 @@
 📦 files 🔴
+📦 commands 🔴
 
 🐇 🎆 🍇
 
   🌮
+    ✅
     Verifies that a file exists and is readable
-    Returns a string status
+    Returns a 🔡 status
   🌮
   🐇 🐖 ✅ binary 🔡 ➡️ 🔡 🍇
     🍮 result 🔤🔤
     🍊 🍩 📃 📑 binary 🍇
       🍊 🍩 📜 📑 binary 🍇
-        🍎 🔤✅🔤
+        🍮 result 🔤✅🔤
       🍉 🍓 🍇
-        🍎 🔤❌❌  FILE EXISTS BUT IS NOT READABLE ❌❌🔤
+        🍮 result 🔤❌❌  FILE EXISTS BUT IS NOT READABLE ❌❌🔤
       🍉
     🍉
     🍓 🍇
-      🍎 🍪 🔤❌❌  FILE DOES NOT EXIST ❌❌🔤 🍪
+      🍮 result 🍪 🔤❌❌  FILE DOES NOT EXIST ❌❌🔤 🍪
     🍉
-    👴 Can't happen -- static analysis error
     🍎 result
+  🍉
+
+  🌮
+    🔍
+    Returns a 👌 indicating if the element exists in O(n)
+  🌮
+  🐇 🐖 🔍 list 🍨🐚🔡 element 🔡 ➡️ 👌 🍇
+    🔂 list_element list 🍇
+      🍊 😛 list_element element 🍇
+        🍎 👍
+      🍉
+    🍉
+    🍎 👎
+  🍉
+
+  🌮
+    🎲
+    Returns a copy of the list, ordered decreasing by the weights in the hashtable
+  🌮
+  🐇 🐖 🎲 list 🍨🐚🔡 hashtable 🍯🐚🚂 ➡️ 🍨🐚🔡 🍇
+    🍮 nlist 🔷 🍨🐚🔡 🐸
+    🍮 n 🐔 list
+    🔁 ◀️ 🐔 nlist n 🍇
+      🍮 max 0
+      🍮 maxindex -1
+      🍮 index 0
+      🔁 ◀️ index 🐔 list 🍇
+        🍊 ⬅️ maxindex -1 🍇
+          🍮 maxindex 0
+          🍮 max 🍺 🐽 hashtable 🍺 🐽 list maxindex
+        🍉 🍓 🍇
+          🍮 c 🍺 🐽 hashtable 🍺 🐽 list index
+          🍊 ⬅️ max c 🍇
+            🍮 max c
+            🍮 maxindex index
+          🍉
+        🍉
+        🍫 index
+      🍉
+      🐻 nlist 🍺 🐽 list maxindex
+      🐨 list maxindex
+    🍉
+    🍎 nlist
   🍉
 
   🐇 🐖 🏁 ➡️ 🚂 🍇
 
-    🍦 OBJDUMP_CMD 🔤objdump -d -M intel🔤
-
     🍮 binaries 🍨
-      🔤/usr/bin/rlogin🔤
+      🔤/usr/bin/who🔤
+      🔤/usr/bin/whoami🔤
       🔤/usr/local/bin/emojicode🔤
-      🔤/usr/local/bin/emojicodec🔤
+      🔤/usr/bin/hostid🔤
+      🔤/usr/bin/cal🔤
+      🔤/usr/bin/script🔤
+      🔤/usr/bin/rmail🔤
+      🔤/usr/bin/rmic🔤
+      🔤/usr/bin/rev🔤
+      🔤/usr/bin/scriptreplay🔤
+      🔤/usr/bin/broadwayd🔤
+      🔤/usr/bin/runcon🔤
+      🔤/usr/bin/calendar🔤
+      🔤/usr/bin/scp🔤
+      🔤/usr/bin/jstack🔤
     🍆
 
     😀 🔤The following binaries will be analyzed:🔤
@@ -38,6 +92,41 @@
       🍮 result 🍩 ✅ 🎆 binary
       😀 🍪 🔤❌t🔤 🔷🔡🚂 count 10 🔤: 🔤 binary 🔤 - 🔤 result 🍪
       🍫 count
+    🍉
+
+    🍮 instructions 🔷🍯🐚🚂🐸 👴 Hashtable of counts of each instruction
+    🍮 instruction_set 🔷🍨🐚🔡🐸 👴 List of instructions seen so far
+
+    🔂 b binaries 🍇
+      😀 🍪 🔤Analyzing binary: 🔤 b 🍪
+      🍮 command 🍪 🔤objdump -d -M intel 🔤 b 🔤 | grep -E "^\s*[0-9a-zA-Z]{6}:.*$"🔤 🍪
+      🍮 cmdoutput 🍩 ⌨ 🤖 command
+      🍮 lines 🔫 cmdoutput 🔤❌n🔤
+      🔂 line lines 🍇
+        🍮 instruction 🔧 🔪 line 32 7
+        🍊 ❎ 😛 instruction 🔤🔤 🍇
+          👴 😀 🍪 instruction 🔤 - 🔤 🔷🔡🚂 📏 instruction 10 🍪
+          🍮 c 1
+          🍮 c? 🐽 instructions instruction
+          🍊 ❎ ☁️ c? 🍇
+            🍮 c ➕ 🍺 c? 1
+          🍉
+          🐷 instructions instruction c
+          🍊 ❎ 🍩 🔍 🎆 instruction_set instruction 🍇
+            🐻 instruction_set instruction
+          🍉
+        🍉
+      🍉
+    🍉
+
+    🍮 ordered_instructions 🍩 🎲 🎆 instruction_set instructions
+    🍮 c 1
+
+    😀 🔤The following are the most common instructions found in the above binaries:🔤
+
+    🔂 i_key ordered_instructions 🍇
+      😀 🍪 🔷🔡🚂 c 10 🔤: ❌t🔤 i_key 🔤      ❌t 🔤 🔷🔡🚂 🍺 🐽 instructions i_key 10 🍪
+      🍫 c
     🍉
 
     🍎 0

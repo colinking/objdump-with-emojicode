@@ -1,5 +1,7 @@
-# rev-eng-hwk-1: Objdump Analysis with Emojicode
+# Objdump Analysis with Emojicode
 _The Professor did say we could use *any* language..._
+
+A project for HACS208E, Introduction to Reverse Engineering, at the University of Maryland.
 
 ```
 The following binaries will be analyzed:
